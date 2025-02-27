@@ -8,7 +8,7 @@ namespace AvoBright.HtmlSyntaxHighlighter
 {
     #region Format definition
 
-    internal static class FormatNames 
+    internal static class FormatNames
     {
         public const string Delimiter = "HtmlDelimiter";
         public const string Element = "HtmlElement";

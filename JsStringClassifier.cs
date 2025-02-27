@@ -48,7 +48,7 @@ namespace AvoBright.HtmlSyntaxHighlighter
             {
                 createdClassifier = false;
             }
-            
+
         }
     }
     #endregion
@@ -84,10 +84,10 @@ namespace AvoBright.HtmlSyntaxHighlighter
 
 
             foreach (ClassificationSpan cs in classifier.GetClassificationSpans(span))
-	        {
-	            string csClass = cs.ClassificationType.Classification.ToLower();
-	
-	            // Only apply our rules if we found a string literal
+            {
+                string csClass = cs.ClassificationType.Classification.ToLower();
+
+                // Only apply our rules if we found a string literal
                 // VS2013 and 2012 use "string", VS2010 uses "script string"
                 if (csClass == "string" || csClass == "script string")
                 {
@@ -116,7 +116,7 @@ namespace AvoBright.HtmlSyntaxHighlighter
                     result.Add(cs);
                 }
 
-	        }
+            }
 
             return result;
         }
@@ -284,7 +284,7 @@ namespace AvoBright.HtmlSyntaxHighlighter
                             }
                             else if (IsNameChar(c))
                             {
-                                
+
                             }
                             else if (c == '=')
                             {
@@ -335,7 +335,7 @@ namespace AvoBright.HtmlSyntaxHighlighter
                         {
                             if (char.IsWhiteSpace(c))
                             {
-                                
+
                             }
                             else if (IsNameChar(c))
                             {
@@ -353,7 +353,7 @@ namespace AvoBright.HtmlSyntaxHighlighter
                                 state = State.AfterOpenTagSlash;
                                 result.Add(new ClassificationSpan(new SnapshotSpan(span.Start + currentCharIndex, 1), htmlDelimiterType));
                             }
-                            else if (c == '>') 
+                            else if (c == '>')
                             {
                                 state = State.AfterCloseAngleBracket;
                                 result.Add(new ClassificationSpan(new SnapshotSpan(span.Start + currentCharIndex, 1), htmlDelimiterType));
@@ -501,7 +501,7 @@ namespace AvoBright.HtmlSyntaxHighlighter
                             }
                             else
                             {
-                                
+
                             }
 
                             break;
